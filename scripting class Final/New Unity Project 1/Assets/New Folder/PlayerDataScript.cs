@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,8 +15,8 @@ public class PlayerDataScript {
     public int Health;
     public Vector3 SpawnPoint;
 
-    private static PlayerDataScript _instance;
-    private static readonly string playerPrefsIdentifier;
+    public static PlayerDataScript _instance;
+    public static readonly string playerPrefsIdentifier;
 
     public static PlayerDataScript Instance {
         get {
@@ -48,5 +49,8 @@ public class PlayerDataScript {
         PlayerPrefs.SetString(playerPrefsIdentifier, gameDataAsJson);
     }
 
-    
+    public static implicit operator PlayerDataScript(int v)
+    {
+        throw new NotImplementedException();
+    }
 }

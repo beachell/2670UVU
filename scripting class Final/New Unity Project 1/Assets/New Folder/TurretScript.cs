@@ -19,7 +19,7 @@ public class TurretScript : MonoBehaviour
     List<GameObject> targetDinosaurs = new List<GameObject>();
     public float smoothValue = 5;
     public float shootWait;
-
+    
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -72,6 +72,7 @@ public class TurretScript : MonoBehaviour
     private void Fire()
     {
         print("I'm Shooting");
+        
     }
 
 }
